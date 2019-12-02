@@ -55,26 +55,36 @@ http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras
 2. Se establece la simbología del Mapa de Tierras por medio de categorías:
 ![img1](Imagenes/Captura01.PNG)
 
+
 Se realizaron dos mapas, utilizando dos variables para la definición de las categorías
+
 3. El primer mapa corresponde a las categorías definidas por medio del atributo (Value) Leyenda. Se da clic en la opción “Classify” y aparecerán los valores de este atributo:
 ![img1](Imagenes/Captura02.PNG)
+
 
 4. De acuerdo a la simbología establecida por la ANH para definir los bloques de tierras, se asigna los colores a cada categoría:
 ![img1](Imagenes/Captura03.PNG)
 
+
 5. Se realiza el mismo procedimiento con todas las categorías y se obtiene la siguiente clasificación:
 ![img1](Imagenes/Captura04.PNG)
+
 
 6. De la misma manera se establece la simbología para la capa “Departamentos” de manera simple con un contorno gris. Adicionalmente se prenden los labels que permitan visualizar el nombre de cada departamento:
 ![img1](Imagenes/Captura05.PNG)
 
+
 ### Resultado Mapa 1
+
 ![img1](Imagenes/Captura06.PNG)
+
 
 7. Para el segundo mapa las categorías se definen por medio del atributo (Value) Clasificación; el cual corresponderá únicamente a si el bloque está “Asignado” o es un “Área Reservada”. Para este caso se eliminan los bordes, lo que permitirá observar de manera continua el color. 
 
+
 ### Resultado Mapa 2
 ![img1](Imagenes/Captura10.PNG)
+
 
 ### Publicación de los Mapas por medio QGisCloud
 
