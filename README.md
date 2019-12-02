@@ -2,21 +2,21 @@
 
 ## MAPA DE TIERRAS
 
-Mapa web de bloques de Hidrocarburos en Colombia
+Mapa web de bloques de Hidrocarburos en Colombia.
 
 ##  Cuál es el problema a tratar?
 
-Conocer que uso se le está dando al territorio colombiano en cuanto a la explotación de recursos no renovables dentro del sector hidrocarburífero 
+Conocer que uso se le está dando al territorio colombiano en cuanto a la explotación de recursos no renovables dentro del sector hidrocarburífero.
 
 
 ##  Por qué un mapa ayuda a resolverlo?
 
-Porque el mapa permite mostrar de manera gráfica la especialización de las áreas y el estado en que se encuentran los bloques de Hidrocarburos. Además, con la opción de los metadatos se puede conocer a mayor profundidad la información de cada bloque 
+Porque el mapa permite mostrar de manera gráfica la especialización de las áreas y el estado en que se encuentran los bloques de Hidrocarburos. Además, con la opción de los metadatos se puede conocer a mayor profundidad la información de cada bloque.
 
 
 ## Descripción del mapa temático
 
-El MAPA DE TIERRAS permite visualizar el estado y la distribución de los bloques en Colombia, consiste en mostrar el territorio en polígonos con una representación de color y atributos con la información de los contratos de presentes.
+El MAPA DE TIERRAS permite visualizar el estado y la distribución de los bloques en Colombia, consiste en mostrar el territorio en polígonos con una representación de color y atributos con la información de los contratos presentes.
 
 
 ## Descripción de los métodos de clasificación seleccionados
