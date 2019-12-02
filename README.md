@@ -11,17 +11,31 @@ Conocer que uso se le está dando al territorio colombiano en cuanto a la explot
 
 ##  Por qué un mapa ayuda a resolverlo?
 
-Porque el mapa permite mostrar de manera gráfica la especialización de las áreas y el estado en que se encuentran los bloques de Hidrocarburos. Además, con la opción de los metadatos se puede conocer más información acerca de cada bloque 
+Porque el mapa permite mostrar de manera gráfica la especialización de las áreas y el estado en que se encuentran los bloques de Hidrocarburos. Además, con la opción de los metadatos se puede conocer a mayor profundidad la información de cada bloque 
 
 
 ## Descripción del mapa temático
 
-(Variable seleccionada, utilidad)
+El MAPA DE TIERRAS permite visualizar el estado y la distribución de los bloques en Colombia, consiste en mostrar el territorio en polígonos con una representación de color y atributos con la información de los contratos de presentes.
 
 
 ## Descripción de los métodos de clasificación seleccionados
 
-Cual es mejor para la variable seleccionada? Por qué?
+Se realizó la clasificación por medio de dos categorías:
+
+### Leyenda
+Esta variable combina los atributos de Clasificación, Estado de Área y Tipo de Contrato, de los bloques de hidrocarburos, con lo cual, se puede observar de manera entendible el uso del suelo que se le está dando a un área específica en cuanto a la explotación de recursos. Por medio de este variable se observa un mapa con las siguientes categorías:
+-	Área en Exploración 
+-	Área en Producción
+-	Área Reservada
+-	Área Reservada Ambiental
+-	TEA (Evaluación Técnica con ANH)
+
+### Clasificación 
+Esta variable permite observar fácilmente el área que se encuentra asignada para algún proceso de exploración y/o explotación de hidrocarburos, así como las áreas que son Reservadas principalmente por temas ambientales. Por medio de este variable se observa un mapa con las siguientes categorías:
+-	Asignada
+-	Reservada
+
 
 ## Fuente de datos
 
@@ -41,7 +55,7 @@ http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras
 ##  Proceso Realizado
 
 ### Instalación de Software
-1. Se descargo el programa QGis
+1. Se descargó el programa QGis
 2. En QGis se instaló del plugins de QGisCloud
 3. Se creó cuenta en QgisCloud 
 
@@ -124,11 +138,12 @@ Se realizaron dos mapas, utilizando dos variables para la definición de las cat
 - No fue posible realizar el ejercicio por medio del plugins QGis2Web, ya que una vez se intentaba abrir la ventada para publicar el mapa se cerraba el programa
 
 
+
 ##  Urls
 
-###MapaTierrasA - Categorias por Leyenda
+### MapaTierrasA - Categorias por Leyenda
 https://qgiscloud.com/jennysaray/Tarea_01_MapaTierrasA_Cloud/?bl=&st=&l=Shape_Tierras%20Tierras_SEPTIEMBRE_170919%2CDepartamentos%20Categoria_Departamentos&t=Tarea_01_MapaTierrasA_Cloud&e=-905886%2C286380%2C2708322%2C2024693
 
-###MapaTierrasB - Categorias por Calsificación
+### MapaTierrasB - Categorias por Calsificación
 https://qgiscloud.com/jennysaray/Tarea_01_MapaTierrasB_Cloud/?bl=&st=&l=Departamentos%20Categoria_Departamentos%2CShape_Tierras%20Tierras_SEPTIEMBRE_170919&t=Tarea_01_MapaTierrasB_Cloud&e=-703963%2C510968%2C2910245%2C2249281
 
