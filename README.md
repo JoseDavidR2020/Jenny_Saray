@@ -39,6 +39,8 @@ http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras
 1. Se descargó en formato shapefile los Departamentos de la página de datos abiertos de MinTic
 2. Se descargó en formato shapefile el Mapa de Tierras de 2019 de la página de la Agencia Nacional de Hidrocarburos
 
+### Descarga de insumos
+
 ![img1](Imagenes/Captura01.PNG)
 
 
