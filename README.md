@@ -15,10 +15,10 @@ Porque el mapa permite mostrar de manera gráfica la especialización de las ár
 
 ## Fuente de datos
 
-DEPARTAMENTOS
+Departamentos
 https://www.datos.gov.co/Mapas-Nacionales/Departamentos-y-municipios-de-Colombia/xdk5-pm3f
 
-MAPA DE TIERRAS
+Mapa de Tierras
 http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras
 
 
@@ -27,27 +27,21 @@ http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras
 - QGIS
 - QgisCloud
 
+
 ##  Proceso Realizado
 
-- Se creó cuenta gratuita en QgisCloud https://qgiscloud.com/
-- En QGIS se instaló del plugin de qgiscloud
+### Instalación de Software
+1. Se descargo el programa QGis
+2. En QGIS se instaló del plugin de qgiscloud
+3. Se creó cuenta en QgisCloud 
+
+### Descarga de insumos
+1. Se descargó en formato shapefile los Departamentos de la página de datos abiertos de MinTic
+2. Se descargó en formato shapefile el Mapa de Tierras de 2019 de la página de la Agencia Nacional de Hidrocarburos
+
+![img1](Imagenes/Captura01.png)
 
 
-![img1](images/00_qgiscloud.png)
-
-
-- Se descargó la información en formato .shp
-- Se configuró simbología a través de clasificación categórica por atributo único.
-
-![img1](images/00_simbologia.png)
-
-- Mapa resultante:
-
-![img2](images/00_mapa.png)
-
-- Se realizó la publicación del mapa en la web utilizando QgisCloud
-
-![img3](images/00_publicado.png)
 
 
 ##  Urls
