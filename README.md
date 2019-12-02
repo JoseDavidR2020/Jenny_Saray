@@ -13,6 +13,16 @@ Conocer que uso se le está dando al territorio colombiano en cuanto a la explot
 
 Porque el mapa permite mostrar de manera gráfica la especialización de las áreas y el estado en que se encuentran los bloques de Hidrocarburos. Además, con la opción de los metadatos se puede conocer más información acerca de cada bloque 
 
+
+## Descripción del mapa temático
+
+(Variable seleccionada, utilidad)
+
+
+## Descripción de los métodos de clasificación seleccionados
+
+Cual es mejor para la variable seleccionada? Por qué?
+
 ## Fuente de datos
 
 Departamentos
@@ -39,9 +49,14 @@ http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras
 1. Se descargó en formato shapefile los Departamentos de la página de datos abiertos de MinTic
 2. Se descargó en formato shapefile el Mapa de Tierras de 2019 de la página de la Agencia Nacional de Hidrocarburos
 
-### Descarga de insumos
+### Creación de Mapas en Qgis
+
+
 
 ![img1](Imagenes/Captura01.PNG)
+
+## Ventajas / Desventajas 
+/ dificultades / diferencias encontradas al utilizar QGIS para el desarrollo del ejercicio
 
 
 ##  Urls
