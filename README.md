@@ -42,7 +42,7 @@ http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras
 
 ### Instalación de Software
 1. Se descargo el programa QGis
-2. En QGis se instaló del pluggin de QGisCloud
+2. En QGis se instaló del plugins de QGisCloud
 3. Se creó cuenta en QgisCloud 
 
 ### Descarga de insumos
@@ -88,16 +88,47 @@ Se realizaron dos mapas, utilizando dos variables para la definición de las cat
 
 ### Publicación de los Mapas por medio QGisCloud
 
+8. Se abre la ventada “Cloud Settings” y se ingresa el usuario y contraseña de la cuenta creda en el numeral 3:
+![img1](Imagenes/Captura11.PNG)
 
 
+9. En la ventana “Upload Data” se agregan a la GDB de la nube las capas del mapa
+![img1](Imagenes/Captura12.PNG)
 
-## Ventajas / Desventajas 
-/ dificultades / diferencias encontradas al utilizar QGIS para el desarrollo del ejercicio
+
+10. Cuando termina de ejecutarse el paso anterior, aparecerá una ventana en la que se guardara el proyecto:
+![img1](Imagenes/Captura13.PNG)
+
+
+11. Finalmente en la pestaña “Maps” se publica el mapa:
+![img1](Imagenes/Captura14.PNG)
+
+![img1](Imagenes/Captura15.PNG)
+
+
+### Viasualización de los Mapas en QGisCloud
+
+12. En el navegador se ingresa a la cuenta de Qgis Cloud en la cual se podrán observar los mapas creados. Ejemplo:
+![img1](Imagenes/Captura16.PNG)
+
+
+## Comentarios acerca de QGIS para el desarrollo del ejercicio
+
+### Ventajas
+- Se pueden realizar mapas sencillos por medio de herramientas de acceso libre no pagas
+- Se tiene un entorno de programa fácil de entender para usuarios nuevos en cuanto a las herramientas básicas de simbología 
+
+### Desventajas 
+- Presentó falla de ejecución durante el desarrollo de los procesos
+- Fue necesaria la depuración de la información de la capa "Mapa de Tierras" ya que presentaba conflicto para subir los datos a la nube
+- No fue posible realizar el ejercicio por medio del plugins QGis2Web, ya que una vez se intentaba abrir la ventada para publicar el mapa se cerraba el programa
 
 
 ##  Urls
 
-- Mapa Web https://qgiscloud.com/dersteppenwolf/qgis_mapa_rutas_2/?bl=&st=&l=rutas-habiles-zonales%20Rutas%20H%C3%A1biles%20Zonales&t=qgis_mapa_rutas_2&e=-74.38875%2C4.48498%2C-73.77022%2C4.79034
+###MapaTierrasA - Categorias por Leyenda
+https://qgiscloud.com/jennysaray/Tarea_01_MapaTierrasA_Cloud/?bl=&st=&l=Shape_Tierras%20Tierras_SEPTIEMBRE_170919%2CDepartamentos%20Categoria_Departamentos&t=Tarea_01_MapaTierrasA_Cloud&e=-905886%2C286380%2C2708322%2C2024693
 
-- WMS https://qgiscloud.com/dersteppenwolf/qgis_mapa_rutas_2/wms?SERVICE=WMS&REQUEST=GetCapabilities
+###MapaTierrasB - Categorias por Calsificación
+https://qgiscloud.com/jennysaray/Tarea_01_MapaTierrasB_Cloud/?bl=&st=&l=Departamentos%20Categoria_Departamentos%2CShape_Tierras%20Tierras_SEPTIEMBRE_170919&t=Tarea_01_MapaTierrasB_Cloud&e=-703963%2C510968%2C2910245%2C2249281
 
