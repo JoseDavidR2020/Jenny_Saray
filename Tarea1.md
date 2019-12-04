@@ -144,6 +144,9 @@ Se realizaron dos mapas, utilizando dos variables para la definición de las cat
 ### MapaTierrasA - Categorias por Leyenda
 https://qgiscloud.com/jennysaray/Tarea_01_MapaTierrasA_Cloud/?bl=&st=&l=Shape_Tierras%20Tierras_SEPTIEMBRE_170919%2CDepartamentos%20Categoria_Departamentos&t=Tarea_01_MapaTierrasA_Cloud&e=-905886%2C286380%2C2708322%2C2024693
 
+WMS: https://qgiscloud.com/jennysaray/Tarea_01_MapaTierrasA_Cloud/wms?SERVICE=WMS&REQUEST=GetCapabilities
+
 ### MapaTierrasB - Categorias por Calsificación
 https://qgiscloud.com/jennysaray/Tarea_01_MapaTierrasB_Cloud/?bl=&st=&l=Departamentos%20Categoria_Departamentos%2CShape_Tierras%20Tierras_SEPTIEMBRE_170919&t=Tarea_01_MapaTierrasB_Cloud&e=-703963%2C510968%2C2910245%2C2249281
 
+WMS: https://qgiscloud.com/jennysaray/Tarea_01_MapaTierrasB_Cloud/wms?SERVICE=WMS&REQUEST=GetCapabilities
