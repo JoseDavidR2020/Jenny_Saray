@@ -120,7 +120,7 @@ Se realizaron dos mapas, utilizando dos variables para la definición de las cat
 ![img1](Imagenes/Captura15.PNG)
 
 
-### Viasualización de los Mapas en QGisCloud
+### Visualización de los Mapas en QGisCloud
 
 12. En el navegador se ingresa a la cuenta de Qgis Cloud en la cual se podrán observar los mapas creados. Ejemplo:
 ![img1](Imagenes/Captura16.PNG)
