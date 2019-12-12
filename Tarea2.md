@@ -1,19 +1,24 @@
 # Tarea 02
 
+
 ## ÁREAS DE PRODUCCIÓN DE HIDROCARBUROS EN EL DEPARTAMENTO DE CESAR
 
 Mapa web con la actividad de los bloques de hidrocarburos que desarrollan actividad de producción en el departamento de Cesar
+
 
 ##  Cuál es el problema a tratar?
 
 Conocer la distribución pozos y contratos que se dedican a la explotación hidrocarburos, clasificándolos por medio de las cuencas sedimentarias 
 
+
 ##  Por qué la publicación de servicios OGC puede ayudar a resolverlo?
 
 Porque por medio de capas base se puede generar una o varias capas nuevas que permitan visualizar y analizar la temática 
 
+
 ##  Qué servicios propone para la solución de su problema? WMS? WMTS? WFS? Por qué?
 WFS, porque la información está dada en shapefile y es por medio de la cual se pueden obtener las capas que permiten ser editadas. Para este ejercicio era necesario extraer información limitando el área y alimentado de varias capas
+
 
 ## Descripción de los datos seleccionados
 
@@ -53,6 +58,7 @@ WFS, porque la información está dada en shapefile y es por medio de la cual se
 
 
 
+
 ##  Descripción del procesamiento realizado con POSTGIS
 El procesamiento de las capas base tiene como fin obtener una capa con las áreas de producción que se están desarrollando en el departamento del Cesar y adicionar información de las cuencas sedimentarias en las que se encuentras estos bloques
 
@@ -74,35 +80,51 @@ El procesamiento de las capas base tiene como fin obtener una capa con las área
 ![img1](Imagenes_T2/cap06.PNG)
 
 4. Dado que el área de interés es el departamento de Cesar, el primer proceso consiste en extraer este departamento:
+
 *Código*
+
 ![img1](Imagenes_T2/cap07.PNG)
 
+
 *Resultado*
+
 ![img1](Imagenes_T2/cap08.PNG)
 
 
 5. Se realiza el cálculo del área a las capas del departamento de Cesar y mapa de tierras:
+
 *Código*
+
 ![img1](Imagenes_T2/cap09.PNG)
 
+
 *Resultado*
+
 ![img1](Imagenes_T2/cap10.PNG)
 
 
 6. Se crear capa de las áreas en producción del departamento de Cesar a partir de intersectar las capas "u8_depto_cesar" y "u8_mtierras" y teniendo como filtro en el mapa de tierras únicamente las áreas cuyo estado sea producción:
+
 *Código*
+
 ![img1](Imagenes_T2/cap11.PNG)
 
+
 *Resultado*
+
 ![img1](Imagenes_T2/cap12.PNG)
 
 
 7. Se crea una columna en donde se almacenará la información de la cuenca sedimentaria sobre la cual se encuentra el bloque: 
+
 *Código*
+
 ![img1](Imagenes_T2/cap13.PNG)
 
 *Resultado*
+
 ![img1](Imagenes_T2/cap14.PNG)
+
 
 
 ##  Procedimiento de cargue de capa en Geoserver
@@ -131,6 +153,7 @@ El procesamiento de las capas base tiene como fin obtener una capa con las área
 11. En la ventana emergente se ingresan los datos solicitados y en la parte inferior se adicionan una a una las capas del grupo:
 ![img1](Imagenes_T2/cap20.PNG)
 ![img1](Imagenes_T2/cap21.PNG)
+
 
 
 ##  Descripción de la forma en que creó la simbología
