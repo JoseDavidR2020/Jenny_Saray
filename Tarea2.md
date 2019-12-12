@@ -64,91 +64,124 @@ El procesamiento de las capas base tiene como fin obtener una capa con las área
 
 1. Se crea una conexión a postgis
 2. Se importan las 4 capas base al servicio creado:
+
 ![img1](Imagenes_T2/cap05.PNG)
 
 ### Procesamiento de las capas base en pgAdmin
 
 3. Se crea una conexión a postgis y se abre el editor sql:
+
 ![img1](Imagenes_T2/cap06.PNG)
 
 4. Dado que el área de interés es el departamento de Cesar, el primer proceso consiste en extraer este departamento:
 *Código*
 ![img1](Imagenes_T2/cap07.PNG)
+
 *Resultado*
 ![img1](Imagenes_T2/cap08.PNG)
+
 
 5. Se realiza el cálculo del área a las capas del departamento de Cesar y mapa de tierras:
 *Código*
 ![img1](Imagenes_T2/cap09.PNG)
+
 *Resultado*
 ![img1](Imagenes_T2/cap10.PNG)
+
 
 6. Se crear capa de las áreas en producción del departamento de Cesar a partir de intersectar las capas "u8_depto_cesar" y "u8_mtierras" y teniendo como filtro en el mapa de tierras únicamente las áreas cuyo estado sea producción:
 *Código*
 ![img1](Imagenes_T2/cap11.PNG)
+
 *Resultado*
 ![img1](Imagenes_T2/cap12.PNG)
+
 
 7. Se crea una columna en donde se almacenará la información de la cuenca sedimentaria sobre la cual se encuentra el bloque: 
 *Código*
 ![img1](Imagenes_T2/cap13.PNG)
+
 *Resultado*
 ![img1](Imagenes_T2/cap14.PNG)
+
 
 ##  Procedimiento de cargue de capa en Geoserver
 
 8. El proceso consiste en adicionar las capas que se desean genearr en el mapa. Para esto, sobre la pestaña “Capas” se selecciona “Agregar nuevo recurso”
 ![img1](Imagenes_T2/cap15.PNG)
 
+
 9. En la ventana emergente se adiciona una a una las capas deseadas seleccionando la pestaña Publicación
 ![img1](Imagenes_T2/cap16.PNG)
+
 
 9. Se ingresan los parámetros solicitados de la siguiente manera:
 ![img1](Imagenes_T2/cap17.PNG)
 
+
 10. Finalmente se pueden observar las Capas en la pestaña “Previsualización de capas” :
 ![img1](Imagenes_T2/cap18.PNG)
 
+
 10. Se realiza una agrupación de las capas anteriormente adicionadas por medio de la opción “Grupos de Capas – Agregar nuevo grupo de capas” :
 ![img1](Imagenes_T2/cap19.PNG)
+
+
 
 11. En la ventana emergente se ingresan los datos solicitados y en la parte inferior se adicionan una a una las capas del grupo:
 ![img1](Imagenes_T2/cap20.PNG)
 ![img1](Imagenes_T2/cap21.PNG)
 
+
 ##  Descripción de la forma en que creó la simbología
 #### Generación de Estilos SLD
 12. En la herramienta Qgis se genera la simbología deseada y se guarda como archivo SLD:
 ![img1](Imagenes_T2/cap22.PNG)
+
 13. En GeoServer se genera el estilo seleccionando la pestaña “Estilos” y luego “Nuevo Estilo” y se ingresan el nombre y parámetros deseados:
 ![img1](Imagenes_T2/cap23.PNG)
+
 En la parte inferior se adiciona el archivo SLD creado en Qgis:
 ![img1](Imagenes_T2/cap24.PNG)
+
 
 Este procedimiento se realiza para las capas:
 -	u8_cuencas_sed
 -	u8_mtierras
 -	u8_depto_cesar
 13. Ahora es posible asignar los estilos creados a las capas previamente adicionadas, esto se realiza ingresando a cada estilo en la pestaña “Publishing” y seleccionando la capa a asignar:
+
 ![img1](Imagenes_T2/cap25.PNG)
+
 *PREVISUALIZACION DE LA CAPA CUENCAS SEDIMENTARIAS*
+
 ![img1](Imagenes_T2/cap26.PNG)
 
+
 *PREVISUALIZACION DE LA CAPA DEPARATAMENTO CESAR*
+
 ![img1](Imagenes_T2/cap27.PNG)
 
+
 *PREVISUALIZACION DE LA CAPA MAPA DE TIERRAS*
+
 ![img1](Imagenes_T2/cap28.PNG)
+
+
 
 #### Generación de Estilos CSS
 14. Se genera el estilo seleccionando la pestaña “Estilos” y luego “Nuevo Estilo” y se ingresan el nombre y parámetros deseados, esta vez se selecciona CSS en Formato:
 ![img1](Imagenes_T2/cap29.PNG)
+
 Este proceso se realiza para las capas pozos y producción cesar
+
 ![img1](Imagenes_T2/cap30.PNG)
 ![img1](Imagenes_T2/cap31.PNG)
 
+
 15. La visualización se realiza en el grupo de capas creado:
 ![img1](Imagenes_T2/cap32.PNG)
+
 
 ## Nombres de las tablas creadas en postgis
 -	u8_depto_cesar
@@ -177,4 +210,5 @@ http://34.83.176.208:18080/geoserver/clase/wms?service=WMS&version=1.1.0&request
 -	No logre tener un mapa con el cual me sienta satisfecha, si bien es una herramienta útil y de acceso dinámico no me gusta la visualización de los colores, cambian bastante con respecto Qgis y no logre generar la transparencia a las capas.
 -	La herramienta QGis es bastante lenta en los procesos gráficos y varios procesos se repitieron por las fallas que este genera
 
-![img1](Imagenes_T2/cap34.PNG)
+
+![img1](Imagenes_T2/cap33.PNG)
