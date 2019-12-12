@@ -181,7 +181,7 @@ Este procedimiento se realiza para las capas:
 ![img1](Imagenes_T2/cap26.PNG)
 
 
-*PREVISUALIZACION DE LA CAPA DEPARATAMENTO CESAR*
+*PREVISUALIZACION DE LA CAPA DEPARTAMENTO CESAR*
 
 ![img1](Imagenes_T2/cap27.PNG)
 
@@ -231,6 +231,11 @@ http://34.83.176.208:18080/geoserver/clase/wms?service=WMS&version=1.1.0&request
 ## Ventajas / desventajas / dificultades encontradas durante el proceso
 
 -	No logre tener un mapa con el cual me sienta satisfecha, si bien es una herramienta útil y de acceso dinámico no me gusta la visualización de los colores, cambian bastante con respecto Qgis y no logre generar la transparencia a las capas.
+
+
+![img1](Imagenes_T2/cap34.PNG)
+
+
 -	La herramienta QGis es bastante lenta en los procesos gráficos y varios procesos se repitieron por las fallas que este genera
 
 
