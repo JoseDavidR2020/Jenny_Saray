@@ -230,7 +230,7 @@ http://34.83.176.208:18080/geoserver/clase/wms?service=WMS&version=1.1.0&request
 
 ## Ventajas / desventajas / dificultades encontradas durante el proceso
 
--	No logre tener un mapa con el cual me sienta satisfecha, si bien es una herramienta útil y de acceso dinámico no me gusta la visualización de los colores, cambian bastante con respecto Qgis y no logre generar la transparencia a las capas.
+-	No logre tener un mapa con el cual me sienta satisfecha, si bien es una herramienta útil y de acceso dinámico no me gusta la visualización de los colores, cambian bastante con respecto Qgis y no logre generar la transparencia a las capas. Queria llegar a algo mas o menos como lo siguiente:
 
 
 ![img1](Imagenes_T2/cap34.PNG)
