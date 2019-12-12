@@ -19,24 +19,38 @@ WFS, porque la información está dada en shapefile y es por medio de la cual se
 
 ### Mapa de tierras
 *Origen:* Agencia Nacional de Hidrocarburos – ANH
+
 *Descripción:* Es la representación gráfica en la cual se muestran el estado de los bloques delimitados para la exploración y la explotación de este recurso no renovable
+
 *Características especiales:* Es un mapa que abarca todo el territorio colombiano tanto continental como la del mar territorial
+
 *Atributos:* Estado de los bloques, clasificación, tipo de contrato, operador, yacimiento
+
 *Url para descarga:* http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras 
 
 ### Cuencas Sedimentarias
 *Origen:* Agencia Nacional de Hidrocarburos – ANH
+
 *Descripción:* Es la representación del territorio colombiano en el cual cuyos polígonos son la clasificación que se le atribuyen a características del suelo y del subsuelo nacional
+
 *Características especiales:* Es un mapa que abarca todo el territorio colombiano tanto continental como la del mar territorial, por lo cual tiene todo el país clasificado por las características que brinda el suelo y el subsuelo.
+
 *Atributos:* nombre cuenca, área, clasificación
+
 *Url para descarga:* http://www.anh.gov.co/Informacion-Geologica-y-Geofisica/Cuencas-sedimentarias
+
 
 ### Pozos
 *Origen:* Servicio Geológico Colombiano
+
 *Descripción:* Es la recopilación de toda la información georreferenciada de la localización de los pozos, suministrados por las operadoras que perforan el territorio colombiano
+
 *Características especiales:* cuenta con los pozos aprobados según formas 4CR y 6CR 
+
 *Atributos:* Identificador único del pozo, nombre del pozo, coordenada x, coordenada y, fecha de descubrimiento
+
 *Url para descarga:* http://srvags.sgc.gov.co/JSViewer/GEOVISOR_BIP/
+
 
 
 ##  Descripción del procesamiento realizado con POSTGIS
