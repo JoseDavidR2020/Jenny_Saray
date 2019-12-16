@@ -1,242 +1,110 @@
 # Tarea 02
 
-
-## ÁREAS DE PRODUCCIÓN DE HIDROCARBUROS EN EL DEPARTAMENTO DE CESAR
-
-Mapa web con la actividad de los bloques de hidrocarburos que desarrollan actividad de producción en el departamento de Cesar
-
+## DESCRIPCIÓN DE LAS ÁREAS DEL MAPA DE TIERRAS Y CARACTERIZACIÓN DEL DEPARTAMENTO DE CESAR 
 
 ##  Cuál es el problema a tratar?
 
-Conocer la distribución pozos y contratos que se dedican a la explotación hidrocarburos, clasificándolos por medio de las cuencas sedimentarias 
+Conocer la clasificación de las áreas del mapa de tierras para el país y las áreas ofertadas para el departamento de Cesar en el proceso competitivo permanente
 
+##  Por qué una experiencia interactiva ayuda a resolverlo?
 
-##  Por qué la publicación de servicios OGC puede ayudar a resolverlo?
+Porque permite conocer, no solo los atributos de la clasificación de las áreas, sino además se tiene acceso al concepto que lo describe. Permite tener un panorama del país para luego dinámicamente moverse a la zona de interés y hacer un análisis a profundidad acerca de los conceptos expuestos.
 
-Porque por medio de capas base se puede generar una o varias capas nuevas que permitan visualizar y analizar la temática 
-
-
-##  Qué servicios propone para la solución de su problema? WMS? WMTS? WFS? Por qué?
-WFS, porque la información está dada en shapefile y es por medio de la cual se pueden obtener las capas que permiten ser editadas. Para este ejercicio era necesario extraer información limitando el área y alimentado de varias capas
-
-
-## Descripción de los datos seleccionados
+## Descripción de los datos 
 
 ### Mapa de tierras
-*Origen:* Agencia Nacional de Hidrocarburos – ANH
-
-*Descripción:* Es la representación gráfica en la cual se muestran el estado de los bloques delimitados para la exploración y la explotación de este recurso no renovable
-
-*Características especiales:* Es un mapa que abarca todo el territorio colombiano tanto continental como la del mar territorial
-
-*Atributos:* Estado de los bloques, clasificación, tipo de contrato, operador, yacimiento
-
+*Tipos de geometría:* Vector – Polígono 
+*Atributos:* Nombre de Contrato, Estado del Bloque, Clasificación, Tipo de Contrato, Operador, Yacimiento, Cuenca, Área
+*Sistema de referencia:* MAGNA_Colombia_Bogota
 *Url para descarga:* http://www.anh.gov.co/hidrocarburos/oportunidades-disponibles/mapa-de-tierras 
 
 ### Cuencas Sedimentarias
-*Origen:* Agencia Nacional de Hidrocarburos – ANH
-
-*Descripción:* Es la representación del territorio colombiano en el cual cuyos polígonos son la clasificación que se le atribuyen a características del suelo y del subsuelo nacional
-
-*Características especiales:* Es un mapa que abarca todo el territorio colombiano tanto continental como la del mar territorial, por lo cual tiene todo el país clasificado por las características que brinda el suelo y el subsuelo.
-
-*Atributos:* nombre cuenca, área, clasificación
-
+*Tipos de geometría:* Vector – Polígono
+*Atributos:* Nombre cuenca
+*Sistema de referencia:* MAGNA_Colombia_Bogota
 *Url para descarga:* http://www.anh.gov.co/Informacion-Geologica-y-Geofisica/Cuencas-sedimentarias
 
+##  Descripción del procesamiento realizado a los datos
+Los datos utilizados fueron los descargados en las páginas mencionadas anteriormente:
+-	Mapa de tierras, fue utilizado en los diferentes mapas sin ningún procesamiento geográfico. Para el despliegue de la información que se requería se usaron únicamente filtros en la herramienta de publicación ArcGis Online
+-	Cuencas Sedimentarias, fue utilizado en los diferentes mapas sin ningún procesamiento geográfico. 
 
-### Pozos
-*Origen:* Servicio Geológico Colombiano
+##  Descripción de las diferentes técnicas y métodos utilizados para la visualización de datos
+Se creó un mxd base en ArcGis con la simbología deseada, la cual, para el caso del mapa de tierras fue descargada de la misma Url del mapa en formato .lyr. Para las cuencas se generó una simbología por categoría de nombre y los departamentos se dejaron en simbología sencilla de limite.
+Este mxd se publicó como servicio y fue lavase para la generación de todas las vistas. Dese la herramienta de publicación ArcGis Online, se realizaron los filtros y cambios de simbología requeridos 
 
-*Descripción:* Es la recopilación de toda la información georreferenciada de la localización de los pozos, suministrados por las operadoras que perforan el territorio colombiano
+##  Descripción del procedimiento realizado 
+La historia tiene como fin explicar la clasificación de las áreas del mapa de tierras y con ello hacer el acercamiento a un departamento en el cual se puedan observar las áreas en exploración y producción así como las áreas ofertadas en el proceso permanente de asignación de áreas:
 
-*Características especiales:* cuenta con los pozos aprobados según formas 4CR y 6CR 
+1. Se ingresa a ArcGis Online y se selecciona una plantilla que sirva para mostrar la temática deseada
 
-*Atributos:* Identificador único del pozo, nombre del pozo, coordenada x, coordenada y, fecha de descubrimiento
+![img1](Imagenes_T3/Capt01.PNG)
 
-*Url para descarga:* http://srvags.sgc.gov.co/JSViewer/GEOVISOR_BIP/
+2. En el PASO 1 se selecciona el tipo de archivo que se desea mostrar, para este caso en la primera vista se adiciono una imagen en la parte derecha:
 
+![img1](Imagenes_T3/Capt02.PNG)
 
+3. En el PASO 2 se selecciona el tipo de archivo que se desea mostrar, para este caso en la primera vista se adiciono un texto que explica que es un Mapa de Tierras:
 
+![img1](Imagenes_T3/Capt03.PNG)
 
-##  Descripción del procesamiento realizado con POSTGIS
-El procesamiento de las capas base tiene como fin obtener una capa con las áreas de producción que se están desarrollando en el departamento del Cesar y adicionar información de las cuencas sedimentarias en las que se encuentras estos bloques
+4. En las vistas posteriores se desea mostrar mapas en la parte derecha y descripción en la parte izquierda, por ello para la generación del mapa, se dio simbología a las capas en Desktop y se publicó como servicio: 
 
-### Instalación de Software
-1. Se descargó el programa QGis 
-2. Se descargó el programa pgAdmin
+![img1](Imagenes_T3/Capt05.PNG)
 
-### Cargue de capas por medio de QGis
+5. Se ingresa usuario y clave de ArcGis Online y se guarda como servicio:
 
-1. Se crea una conexión a postgis
-2. Se importan las 4 capas base al servicio creado:
+![img1](Imagenes_T3/Capt06.PNG)
+![img1](Imagenes_T3/Capt07.PNG)
 
-![img1](Imagenes_T2/cap05.PNG)
+6. Se agrega una nueva sección, pero esta vez en el PASO 1 se selecciona la opción crear un mapa:
 
-### Procesamiento de las capas base en pgAdmin
+![img1](Imagenes_T3/Capt04.PNG)
 
-3. Se crea una conexión a postgis y se abre el editor sql:
+7. En la ventana emergente se adiciona la capa guardada como servicio: 
 
-![img1](Imagenes_T2/cap06.PNG)
+![img1](Imagenes_T3/Capt08.PNG)
 
-4. Dado que el área de interés es el departamento de Cesar, el primer proceso consiste en extraer este departamento:
+8. En esta ventana es posible realizar los ajustes deseados en la visualización del mapa y una vez ajustado se da clic en guardar: 
 
-*Código*
+![img1](Imagenes_T3/Capt09.PNG)
 
-![img1](Imagenes_T2/cap07.PNG)
+9. Nuevamente en el PASO 2 se adiciono texto que explica los conceptos de la clasificación del Mapa de Tierras
 
+![img1](Imagenes_T3/Capt10.PNG)
 
-*Resultado*
+10 . Se realiza el mismo procedimiento para las vistas posteriores de ingreso de mapa en el PASO 1 y descripción en el PASO 2 con la diferencia de ir realizando la edición en cada mapa para mostrar la información deseada en el acercamiento (zoom) adeudado. En este ejercicio se realizaron principalmente procesos de filtrado:   
 
-![img1](Imagenes_T2/cap08.PNG)
+## FILTRO PARA LA CAPA DEPARTAMENTOS SELECCIONANDO CESAR 
 
+![img1](Imagenes_T3/Capt16.PNG)
 
-5. Se realiza el cálculo del área a las capas del departamento de Cesar y mapa de tierras:
+## FILTRO PARA LA CAPA MAPA DE TIERRAS SELECCIONANDO LOS BLOQUES DEL PROCESO PERMANENTE DE ASIGNACIÓN DE ÁREAS DEL DEPARTAMENTO DE CESAR 
 
-*Código*
+![img1](Imagenes_T3/Capt17.PNG)
 
-![img1](Imagenes_T2/cap09.PNG)
+## FILTRO PARA LA CAPA MAPA DE TIERRAS SELECCIONANDO LOS BLOQUES EN PRODUCCIÓN Y EXPLORACIÓN DEPARTAMENTO DE CESAR 
 
+![img1](Imagenes_T3/Capt21.PNG)
 
-*Resultado*
 
-![img1](Imagenes_T2/cap10.PNG)
+10 . Se realizaron procedimientos como la selección de los atributos que se mostraran en la ventana emergente: 
 
+![img1](Imagenes_T3/Capt19.PNG)
 
-6. Se crear capa de las áreas en producción del departamento de Cesar a partir de intersectar las capas "u8_depto_cesar" y "u8_mtierras" y teniendo como filtro en el mapa de tierras únicamente las áreas cuyo estado sea producción:
-
-*Código*
-
-![img1](Imagenes_T2/cap11.PNG)
-
-
-*Resultado*
-
-![img1](Imagenes_T2/cap12.PNG)
-
-
-7. Se crea una columna en donde se almacenará la información de la cuenca sedimentaria sobre la cual se encuentra el bloque: 
-
-*Código*
-
-![img1](Imagenes_T2/cap13.PNG)
-
-*Resultado*
-
-![img1](Imagenes_T2/cap14.PNG)
-
-
-
-##  Procedimiento de cargue de capa en Geoserver
-
-8. El proceso consiste en adicionar las capas que se desean genearr en el mapa. Para esto, sobre la pestaña “Capas” se selecciona “Agregar nuevo recurso”
-![img1](Imagenes_T2/cap15.PNG)
-
-
-9. En la ventana emergente se adiciona una a una las capas deseadas seleccionando la pestaña Publicación
-![img1](Imagenes_T2/cap16.PNG)
-
-
-9. Se ingresan los parámetros solicitados de la siguiente manera:
-![img1](Imagenes_T2/cap17.PNG)
-
-
-10. Finalmente se pueden observar las Capas en la pestaña “Previsualización de capas” :
-![img1](Imagenes_T2/cap18.PNG)
-
-
-10. Se realiza una agrupación de las capas anteriormente adicionadas por medio de la opción “Grupos de Capas – Agregar nuevo grupo de capas” :
-![img1](Imagenes_T2/cap19.PNG)
-
-
-
-11. En la ventana emergente se ingresan los datos solicitados y en la parte inferior se adicionan una a una las capas del grupo:
-![img1](Imagenes_T2/cap20.PNG)
-![img1](Imagenes_T2/cap21.PNG)
-
-
-
-##  Descripción de la forma en que creó la simbología
-#### Generación de Estilos SLD
-12. En la herramienta Qgis se genera la simbología deseada y se guarda como archivo SLD:
-![img1](Imagenes_T2/cap22.PNG)
-
-13. En GeoServer se genera el estilo seleccionando la pestaña “Estilos” y luego “Nuevo Estilo” y se ingresan el nombre y parámetros deseados:
-![img1](Imagenes_T2/cap23.PNG)
-
-En la parte inferior se adiciona el archivo SLD creado en Qgis:
-![img1](Imagenes_T2/cap24.PNG)
-
-
-Este procedimiento se realiza para las capas:
--	u8_cuencas_sed
--	u8_mtierras
--	u8_depto_cesar
-13. Ahora es posible asignar los estilos creados a las capas previamente adicionadas, esto se realiza ingresando a cada estilo en la pestaña “Publishing” y seleccionando la capa a asignar:
-
-![img1](Imagenes_T2/cap25.PNG)
-
-*PREVISUALIZACION DE LA CAPA CUENCAS SEDIMENTARIAS*
-
-![img1](Imagenes_T2/cap26.PNG)
-
-
-*PREVISUALIZACION DE LA CAPA DEPARTAMENTO CESAR*
-
-![img1](Imagenes_T2/cap27.PNG)
-
-
-*PREVISUALIZACION DE LA CAPA MAPA DE TIERRAS*
-
-![img1](Imagenes_T2/cap28.PNG)
-
-
-
-#### Generación de Estilos CSS
-14. Se genera el estilo seleccionando la pestaña “Estilos” y luego “Nuevo Estilo” y se ingresan el nombre y parámetros deseados, esta vez se selecciona CSS en Formato:
-![img1](Imagenes_T2/cap29.PNG)
-
-Este proceso se realiza para las capas pozos y producción cesar
-
-![img1](Imagenes_T2/cap30.PNG)
-![img1](Imagenes_T2/cap31.PNG)
-
-
-15. La visualización se realiza en el grupo de capas creado:
-![img1](Imagenes_T2/cap32.PNG)
-
-
-## Nombres de las tablas creadas en postgis
--	u8_depto_cesar
--	u8_produccion_cesar
-
-## Nombres de las capas y estilos publicadas en geoserver
-#### Capas
--	u8_cuencas_sed
--	u8_mtierras
--	u8_pozos_cesar
--	u8_depto_cesar
--	u8_produccion_cesar
-#### Estilos
--	u8_style_cuencas_sed
--	u8_style_mt
--	u8_style_cesar
--	u8_style_pozo
--	u8_style_produccion_cesar
-
-
-## Url de la previsualización del grupo de capas en Geoserver
-http://34.83.176.208:18080/geoserver/clase/wms?service=WMS&version=1.1.0&request=GetMap&layers=clase%3AU8_Tarea_02&bbox=-224808.546875%2C22962.0%2C1806815.875%2C2287798.0&width=688&height=768&srs=EPSG%3A3116&format=application/openlayers#toggle
 
 ## Ventajas / desventajas / dificultades encontradas durante el proceso
 
--	No logre tener un mapa con el cual me sienta satisfecha, si bien es una herramienta útil y de acceso dinámico no me gusta la visualización de los colores, cambian bastante con respecto Qgis y no logre generar la transparencia a las capas. Queria llegar a algo mas o menos como lo siguiente:
+-	Para mi caso que siempre he tenido acercamiento con ArcGis fue mucho más fácil la generación de los mapas deseados por la familiaridad con desktop.
+-	El aplicativo Story Map presenta plantillas que permiten seguir un paso a paso en el desarrollo de la historia de una manera muy fácil de entender.
+-	Con pocas capas se pueden obtener diversos análisis para ser presentados en forma de historia uniendo la visualización geográfica con información descriptiva
+
+-	No encontré la opción de mostrar en la leyenda solamente los resultados de los filtros, por ejemplo, en el mapa del proceso permanente de asignación de áreas se tenía filtro preo la leyenda mostraba todas las áreas del mapa de tierras, por lo cual se realizó una leyenda en la parte de la descripción por medio de una imagen insertada 
 
 
-![img1](Imagenes_T2/cap34.PNG)
+## Url público
+https://arcg.is/0uuuii 
 
 
--	La herramienta QGis es bastante lenta en los procesos gráficos y varios procesos se repitieron por las fallas que este genera
 
 
-![img1](Imagenes_T2/cap33.PNG)
